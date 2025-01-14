@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <script>
+        let c = 25;
+        let f =(c*9/15)+32;
+        document.getElementById("result").innerHTML = +c+" Celcius is " + f + " F ";
+
+        let d = (f-32)*5/9;
+        document.getElementById("result2").innerHTML = +f+" Faranhide is " + d + " C ";
+
+
+    let item1 = 650;
+    let item2 = 100;
+    let quantityitem1 = 3;
+    let quantityitem2 = 7;
+    let shipping = 100;
+
+    document.getElementById("result3").innerHTML 
+    = "<br/>price of item1 is "+item1+
+    "<br/>price of item2 is "+item2+
+    "<br/>quantity of item1 is "+quantityitem1+
+    "<br/>quantity of item2 is "+quantityitem2+
+    "<br/>shipping charges is "+shipping+
+    "<br/>Total Cost of you order is " + ((item1*quantityitem1 + item2*quantityitem2) + 100); 
+    </script>
+</body>
+</html>

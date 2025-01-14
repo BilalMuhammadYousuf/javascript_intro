@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+
+    <script>
+        const myarray = ["Jhon", "Deo", "25"];
+       let x = myarray[0];
+
+        document.getElementById("result").innerHTML=myarray;
+    </script>
+
+    <div id="result2"></div>
+    <script>
+        const fruit = ["apple","banana","cherry","orange"];
+        let displayfruit = "";
+        for(let i=0; i<fruit.length; i++){
+            displayfruit += fruit[i] + "<br/>";
+        }
+        document.getElementById("result2").innerHTML= displayfruit;
+    </script>
+
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+let text = "<ul>";
+fruits.forEach(myFunction);
+text += "</ul>";
+
+document.getElementById("demo").innerHTML = text;
+
+function myFunction(value) {
+  text += "<li>" + value + "</li>";
+} 
+</script>
+
+
+<div id="result4"></div>
+<script>
+    let carheading = "";
+    const myobj = {
+        name : "Jhon",
+        age : 20,
+        car : [ 
+        {name : "ford", models : ["Fiesta", "Focus", "Mustang"]},
+        {name:"BMW", models:["320", "X3", "X5"]},
+        {name:"Fiat", models:["500", "Panda"]}
+    ]
+
+    }
+    for(let i in myobj.car){
+        carheading += "<h2>"+ myobj.car[i].name +"</h2>";
+
+        for( let y in myobj.car[i].models){
+            carheading += "<h4>"+ myobj.car[i].models[y] +"</h4><br>";
+        }
+    }
+
+    document.getElementById("result4").innerHTML = carheading
+</script>
+
+
+<button onclick="myFunction1()">Sort Alphabetically</button>
+<button onclick="myFunction2()">Sort Numerically</button>
+
+<p id="demo4"></p>
+
+<script>
+const points = [40, 100, 1, 5, 25, 10];
+document.getElementById("demo4").innerHTML = points;  
+
+function myFunction1() {
+  points.sort();
+  document.getElementById("demo4").innerHTML = points;
+}
+function myFunction2() {
+  points.sort(function(a, b){return a - b});
+  document.getElementById("demo4").innerHTML = points;
+}
+
+console.log(parseInt('10+2'))
+console.log(parseInt('7FM'))
+console.log(parseInt('F7M'))
+console.log(isNaN("Bilal"))
+function abc(){
+    return;
+}
+abc();
+</script>
+</body>
+</html>

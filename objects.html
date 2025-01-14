@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result1"></div>
+    <div id="result2"></div>
+    <div id="result3"></div>
+    <div id="result4"></div>
+    <div id="result5"></div>
+    <script>
+        function carproperties(){
+            const car = {type:"Fiat", model:"500", color:"red"};
+            document.getElementById("result1").innerHTML= car.type; 
+            document.getElementById("result2").innerHTML= car.model; 
+            document.getElementById("result3").innerHTML= car.color; 
+        }
+        carproperties();
+        
+        function literals(){
+            const person = {};
+            person.name="Jhon Deo";
+            person.age = 25;
+            person.addres = "abcd";
+            document.getElementById("result4").innerHTML="This is name " + person.name + "This is Age " + person.age;
+        }
+        literals();
+
+        function newobject(){
+            const person = new Object();
+            person.name="Jhon Deo";
+            person.age = 25;
+            person.addres = "abcd";
+            document.getElementById("result5").innerHTML="This is name " + person.name + "This is Age " + person.age;
+
+        }
+        newobject();
+    </script>
+    <p id="demo"></p>
+
+    <script>
+    const person2 = {
+      firstname: "John",
+      lastname: "Doe",
+      age: 50,
+      eyecolor: "blue"
+    };
+    
+    document.getElementById("demo").innerHTML = person2.firstname + " is " + person2.age + " years old.";
+    </script>
+    <p id="demo2"></p>
+
+    <script>
+    const person3 = {
+      firstname: "John",
+      lastname: "Doe",
+      age: 50,
+      eyecolor: "blue"
+    };
+    
+    document.getElementById("demo2").innerHTML = person3["firstname"] + " is " + person3["age"] + " years old.";
+    </script>
+    <p id="demo4"></p>
+
+    <script>
+    const person4 = {
+      firstName: "John",
+      lastName : "Doe",
+      age      :  50
+    };
+    
+    let x = "firstName";
+    let y = "age";
+    document.getElementById("demo4").innerHTML = person4[x] + " is " + person4[y] + " years old.";
+    </script>
+    <p id="demo5"></p>
+
+    <script>
+    const person5 = {
+      firstname: "John",
+      lastname: "Doe",
+      age: 50,
+      eyecolor: "blue"
+    };
+    
+    delete person5.age;
+    
+    document.getElementById("demo5").innerHTML =
+    person5.firstname + " is " + person5.age + " years old.";
+    </script>
+
+<p id="demo6"></p>
+
+<script>
+// Create nested Objects
+const myObj = {
+  name: "John",
+  age: 30,
+  myCars: {
+    car1: "Ford",
+    car2: "BMW",
+    car3: "Fiat"
+  }
+}
+document.getElementById("demo6").innerHTML = myObj["myCars"]["car2"];
+</script>
+
+<p id="demo7"></p>
+
+<script>
+// Create nested Objects
+const myObj7 = {
+  name: "John",
+  age: 30,
+  myCars: {
+    car1: "Ford",
+    car2: "BMW",
+    car3: "Fiat"
+  }
+}
+document.getElementById("demo7").innerHTML = myObj7.myCars.car2;
+</script>
+</body>
+</html>

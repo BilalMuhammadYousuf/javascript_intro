@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        const person = {
+            firstname : "Jhon Deo",
+            lastname : "Clark",
+            age:"25",
+            id:"123",
+            fullname : function(){
+                return this.firstname + " Last Name "  + this.lastname;
+            }
+        };
+        document.getElementById("result").innerHTML=person.fullname();
+    </script>
+
+    <div id="result2"></div>
+    <script>
+        const person2 = {
+            firstname : "jhon",
+            lastname : "deo",
+            age : "32"
+        };
+        person2.fullname = function(){
+            return person2.firstname + " " + person2.lastname;
+        }
+        document.getElementById("result2").innerHTML = person2.fullname();
+    </script>
+
+<p id="demo3"></p>
+
+<script>
+// Create an Object
+const person3 = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+};
+
+// Add a Method
+person3.name = function() {
+  return (this.firstName + " " + this.lastName).toUpperCase();
+};
+
+// Display Object Data
+document.getElementById("demo3").innerHTML =
+"My father is " + person3.name(); 
+</script>
+</body>
+</html>

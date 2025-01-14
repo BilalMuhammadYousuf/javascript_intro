@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="result"></div>
+
+    <script>
+
+        const person1 = {
+            name: "Jhon Deo",
+            age: "32",
+            car: "Vego"
+        };
+
+        let text = "";
+
+        for (let x in person1) {
+            text += person1[x];
+        }
+        document.getElementById("result").innerHTML = text;
+
+
+    </script>
+
+    <div id="result2"></div>
+<script>
+    const person2 = {
+        name : "jhon deo",
+        age : "32",
+        car : "vego"
+    };
+
+const Myarray = Object.values(person2);
+document.getElementById("result2").innerHTML=Myarray;
+</script>
+
+
+<div id="result3"></div>
+
+<script>
+    const fruits = {banana:"200",apples:"400",grapes:"100"};
+    let text2 = "";
+    for(let [label,amount] of Object.entries(fruits)){
+        text2 += label+ " : " + amount +"<br>"; 
+    }
+    document.getElementById("result3").innerHTML = text2;
+</script>
+<p id="demo"></p>
+
+<script>
+// Create an Object
+const person3 = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+// Display JSON
+document.getElementById("demo").innerHTML = JSON.stringify(person3);
+</script>
+</body>
+
+</html>
